@@ -1,0 +1,26 @@
+{
+	"customTemplates": [
+		{
+			"name": "page-cart",
+			"title": "Cart",
+			"postTypes": [
+				"page"
+			]
+		},
+		{
+			"name": "page-checkout",
+			"title": "Checkout",
+			"postTypes": [
+				"page"
+			]
+		},
+		{
+			"name": "single-product",
+			"title": "Single Product",
+			"postTypes": [
+				"product"
+			]
+		}
+	],
+	"version": 2
+}

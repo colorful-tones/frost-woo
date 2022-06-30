@@ -1,0 +1,6 @@
+# Operating sytem
+.DS_Store
+
+# Build / Dev
+node_modules
+.vscode
