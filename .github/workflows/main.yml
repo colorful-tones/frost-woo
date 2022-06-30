@@ -1,0 +1,22 @@
+name: Deploy to WP Engine
+on:
+  push:
+    branches:
+     - main
+jobs:
+  build:
+    runs-on: ubuntu-latest  
+    steps: 
+    - uses: actions/checkout@v2
+    - name: GitHub Action Deploy to WP Engine
+      uses: wpengine/github-action-wpe-site-deploy@v3.0
+      with:
+      # Deploy vars 
+        WPE_SSHG_KEY_PRIVATE: ${{ secrets.WPE_SSHG_KEY_PRIVATE }} 
+        WPE_ENV: frostwoo
+        # Deploy Options
+        SRC_PATH: "wp-content/themes/frost-woo/"
+        REMOTE_PATH: "wp-content/themes/frost-woo/"
+        PHP_LINT: TRUE
+        FLAGS: -azvr --inplace --delete --exclude=".*" --exclude-from=.deployignore
+        CACHE_CLEAR: TRUE
