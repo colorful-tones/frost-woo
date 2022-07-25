@@ -46,7 +46,7 @@ if ( ! function_exists( 'is_woocommerce_activated' ) ) {
 	/**
 	 * Alter the queue for WooCommerce styles and scripts.
 	 *
-	 * @since Extendable 1.0.5
+	 * @since 0.1.1
 	 *
 	 * @param array $styles Array of registered styles.
 	 *
