@@ -1,6 +1,15 @@
 {
 	"version": 2,
 	"settings": {
+		"color": {
+			"gradients": [
+				{
+					"name": "Insta",
+					"slug": "insta",
+					"gradient": "linear-gradient(135deg,rgb(6,147,227) 0%,rgb(228,13,13) 71%,rgb(155,81,224) 100%)"
+				}
+			]
+		},
 		"typography": {
 			"fontFamilies": [
 				{
