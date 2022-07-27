@@ -29,8 +29,13 @@ if ( ! function_exists( 'frost_woocommerce_setup' ) ) {
 		add_theme_support( 'wc-product-gallery-zoom' );
 		add_theme_support( 'wc-product-gallery-lightbox' );
 		add_theme_support( 'wc-product-gallery-slider' );
-		add_theme_support( 'woocommerce' );
-
+		add_theme_support( 
+			'woocommerce',
+			array(
+				'thumbnail_image_width' => 400,
+				'single_image_width'    => 600,
+			)
+		);
 	}
 }
 add_action( 'after_setup_theme', 'frost_woocommerce_setup' );
