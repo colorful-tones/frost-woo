@@ -82,27 +82,27 @@
 <!-- wp:group -->
 <div class="wp-block-group"><!-- wp:group {"style":{"spacing":{"blockGap":"12px"}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"center"}} -->
 <div class="wp-block-group"><!-- wp:image {"id":88,"width":50,"height":28,"sizeSlug":"full","linkDestination":"none"} -->
-<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/Visa.png' ) ); ?>" alt="" class="wp-image-88" width="50" height="28"/></figure>
+<figure class="wp-block-image size-full is-resized"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/credit-cards/Visa.png' ) ); ?>" alt="" class="wp-image-88" width="50" height="28"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:image {"id":86,"width":50,"height":28,"sizeSlug":"full","linkDestination":"none"} -->
 <figure class="wp-block-image size-full is-resized"><img src="<?php
-echo esc_url( get_theme_file_uri( 'assets/images/MasterCard.png' ) ); ?>" alt="" class="wp-image-86" width="50" height="28"/></figure>
+echo esc_url( get_theme_file_uri( 'assets/images/credit-cards/MasterCard.png' ) ); ?>" alt="" class="wp-image-86" width="50" height="28"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:image {"id":84,"width":50,"height":28,"sizeSlug":"full","linkDestination":"none"} -->
 <figure class="wp-block-image size-full is-resized"><img src="<?php
-echo esc_url( get_theme_file_uri( 'assets/images/American_Express.png' ) ); ?>" alt="" class="wp-image-84" width="50" height="28"/></figure>
+echo esc_url( get_theme_file_uri( 'assets/images/credit-cards/American_Express.png' ) ); ?>" alt="" class="wp-image-84" width="50" height="28"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:image {"id":87,"width":50,"height":28,"sizeSlug":"full","linkDestination":"none"} -->
 <figure class="wp-block-image size-full is-resized"><img src="<?php
-echo esc_url( get_theme_file_uri( 'assets/images/PayPal.png' ) ); ?>" alt="" class="wp-image-87" width="50" height="28"/></figure>
+echo esc_url( get_theme_file_uri( 'assets/images/credit-cards/PayPal.png' ) ); ?>" alt="" class="wp-image-87" width="50" height="28"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:image {"id":85,"width":50,"height":28,"sizeSlug":"full","linkDestination":"none"} -->
 <figure class="wp-block-image size-full is-resized"><img src="<?php
-echo esc_url( get_theme_file_uri( 'assets/images/Discover.png' ) ); ?>" alt="" class="wp-image-85" width="50" height="28"/></figure>
+echo esc_url( get_theme_file_uri( 'assets/images/credit-cards/Discover.png' ) ); ?>" alt="" class="wp-image-85" width="50" height="28"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->
