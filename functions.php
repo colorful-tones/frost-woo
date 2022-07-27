@@ -34,3 +34,35 @@ if ( ! function_exists( 'frost_woocommerce_setup' ) ) {
 	}
 }
 add_action( 'after_setup_theme', 'frost_woocommerce_setup' );
+
+if ( ! function_exists( 'is_woocommerce_activated' ) ) {
+	// This theme does not have a traditional sidebar.
+	remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
+
+	/**
+	 * Alter the queue for WooCommerce styles and scripts.
+	 *
+	 * @since 0.0.1
+	 *
+	 * @param array $styles Array of registered styles.
+	 *
+	 * @return array
+	 */
+	function frost_woocommerce_enqueue_styles( $styles ) {
+		// Get a theme version for cache busting.
+		$theme_version = wp_get_theme()->get( 'Version' );
+		$version_string = is_string( $theme_version ) ? $theme_version : false;
+
+		// Add Frost's WooCommerce styles.
+		$styles['frost-woocommerce'] = array(
+			'src'     => get_stylesheet_directory_uri() . '/assets/css/woocommerce.css',
+			'deps'    => '',
+			'version' => $version_string,
+			'media'   => 'all',
+			'has_rtl' => true,
+		);
+
+		return apply_filters( 'woocommerce_frost_styles', $styles );
+	}
+	add_filter( 'woocommerce_enqueue_styles', 'frost_woocommerce_enqueue_styles' );
+}
