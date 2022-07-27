@@ -1,26 +1,85 @@
 {
-	"customTemplates": [
-		{
-			"name": "page-cart",
-			"title": "Cart",
-			"postTypes": [
-				"page"
+	"version": 2,
+	"settings": {
+		"color": {
+			"gradients": [
+				{
+					"name": "Insta",
+					"slug": "insta",
+					"gradient": "linear-gradient(135deg,rgb(6,147,227) 0%,rgb(228,13,13) 71%,rgb(155,81,224) 100%)"
+				}
 			]
 		},
-		{
-			"name": "page-checkout",
-			"title": "Checkout",
-			"postTypes": [
-				"page"
-			]
-		},
-		{
-			"name": "single-product",
-			"title": "Single Product",
-			"postTypes": [
-				"product"
+		"typography": {
+			"fontFamilies": [
+				{
+					"fontFamily": "FogtwoNo5, serif",
+					"name": "FogtwoNo5",
+					"slug": "heading",
+					"fontFace": [
+						{
+							"fontDisplay": "block",
+							"fontFamily": "FogtwoNo5",
+							"fontStretch": "normal",
+							"fontStyle": "normal",
+							"fontWeight": "100 900",
+							"src": [ "file:./assets/fonts/FogtwoNo5/FogtwoNo5.woff2" ]
+						}
+					]
+				},
+				{
+					"fontFamily": "Garamond, Baskerville, Baskerville Old Face, Hoefler Text, Times New Roman, serif",
+					"name": "System Serif",
+					"slug": "body"
+				}
 			]
 		}
-	],
-	"version": 2
+	},
+	"styles": {
+		"blocks": {
+			"core/button": {
+				"border": {
+					"radius": "0"
+				},
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--heading)"
+				}
+			}
+		},
+		"elements": {
+			"h1": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--heading)"
+				}
+			},
+			"h2": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--heading)"
+				}
+			},
+			"h3": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--heading)"
+				}
+			},
+			"h4": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--heading)"
+				}
+			},
+			"h5": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--heading)"
+				}
+			},
+			"h6": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--heading)"
+				}
+			}
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--body)"
+		}
+	}
 }

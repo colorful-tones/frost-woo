@@ -1,5 +1,222 @@
 /*
- * --------------------------------------------------------
- *  WooCommerce
- * --------------------------------------------------------
- */
+  Avoid horizontal scrollbars on <body>
+*/
+.theme-frost{
+	overflow-x: hidden;
+}
+
+/*
+  Make latest Gutenberg and Frost place
+  nice with links.
+*/
+a:not(.wp-element-button) {
+	text-underline-offset: 2px;
+}
+
+/*
+  Gutenberg 13.7+ is working towards supporting
+  button and link element styling with theme.json.
+  However, currently it is in an odd transition to
+  get there. Also, WooCommerce Blocks do not have
+  the newer .wp-element-button class.
+
+  See: https://github.com/woocommerce/woocommerce-blocks/issues/6567#issuecomment-1194601183
+*/
+:is([data-block-name^="woocommerce"]) .add_to_cart_button {
+	color: var(--wp--preset--color--background);
+	text-decoration: none;
+}
+
+/*
+  Until there is full element API parity between
+  WooCommerce and Gutenberg blocks. Then we have
+  to override some things for buttons/links.
+*/
+.woocommerce #respond input#submit,
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button {
+	border-radius: 0;
+	font-family: var(--wp--preset--font-family--heading);
+}
+
+.woocommerce #respond input#submit.alt,
+.woocommerce a.button.alt,
+.woocommerce button.button.alt,
+.woocommerce input.button.alt {
+	background-color: var(--wp--preset--color--foreground);
+}
+
+/*
+  WooCommerce - Price color override.
+*/
+.woocommerce ul.products li.product .price,
+.woocommerce div.product p.price,
+.woocommerce div.product span.price {
+	color: var(--wp--preset--color--primary);
+}
+
+/*
+  WooCommerce - Product grid inner block.
+*/
+:is(a.wc-block-grid__product-link):not(.wp-element-button) {
+	text-decoration: none;
+}
+
+.wc-block-grid__product {
+	position: relative;
+}
+
+.wc-block-grid__product-link {
+	display: block;
+	overflow: hidden;
+}
+
+.wc-block-grid__product-image {
+	aspect-ratio: 3/2;
+	min-height: 228px;
+	overflow: hidden;
+}
+
+.wc-block-grid__product-link img {
+	object-fit: cover;
+	transition: transform 300ms ease;
+	width: 100% !important;
+}
+
+.wc-block-grid__product-link:hover img {
+	transform: scale(1.06);
+}
+
+.wc-block-grid__product-title {
+	align-items: flex-end;
+	background: linear-gradient(135deg,rgba(6,147,227,0.4) 0%,rgba(228,13,13,0.3) 71%,rgba(155,81,224,0.5) 100%);
+	border: 20px solid;
+	border-image-slice: 1;
+	border-image-source: linear-gradient(135deg,rgba(6,147,227,0.4) 0%,rgba(228,13,13,0.3) 71%,rgba(155,81,224,0.5) 100%);
+	color: var(--wp--preset--color--background);
+	display: inline-flex;
+	font-size: var(--wp--preset--font-size--large);
+	font-weight: 400;
+	inset: 0;
+	overflow: hidden;
+	padding: 1rem 0.7rem 0.8rem;
+	position: absolute;
+	text-align: left;
+	transition: border-width 300ms ease, background 200ms ease;
+	transition-delay: 75ms;
+}
+
+.wc-block-grid__product-title:hover {
+	background: linear-gradient(100deg,rgba(6,147,227,0.1) 5%,rgba(228,13,13,0.1) 80%,rgba(155,81,224,0.2) 90%);
+	border-width: 10px;
+}
+
+/*
+  WooCommerce - Mini Cart block
+*/
+.wc-block-mini-cart__icon {
+	height: 1.1rem;
+	width: 1.1rem;
+}
+
+.wc-block-mini-cart__badge {
+	border: .166em solid;
+	font-size: .75em;
+	font-weight: 600;
+	height: 1.3em;
+	min-width: 1.4em;
+	padding: 0 .2em;
+}
+
+/*
+  WooCommerce - Mini Cart contents block
+*/
+h2.wc-block-mini-cart__title {
+	border-bottom: 1px solid #ddd;
+	margin-left: 0;
+	margin-right: 0;
+	padding: 1rem 16px;
+}
+
+.wc-block-components-drawer .components-modal__header .components-button {
+	opacity: 0.5;
+	top: 1rem;
+}
+
+.is-mobile table.wc-block-mini-cart-items .wc-block-cart-items__row {
+	-ms-grid-columns: 180px 132px;
+	grid-template-columns: 180px 132px;
+}
+
+.wc-block-mini-cart-items .wc-block-components-product-image {
+	height: 100%;
+	object-fit: cover;
+}
+
+.wc-block-mini-cart-items .wc-block-components-product-name,
+.wc-block-mini-cart-items .wc-block-components-product-price,
+.wc-block-mini-cart__footer .wc-block-components-totals-item__label,
+.wc-block-mini-cart__footer .wc-block-formatted-money-amount {
+	font-size: var(--wp--preset--font-size--medium);
+}
+
+/*
+  WooCommerce - Shop tables
+*/
+.woocommerce table.shop_table {
+	border-radius: 0;
+}
+
+/*
+  WooCommerce - My Account navigation
+*/
+@media screen only and (min-width: 769px) {
+	.woocommerce-account .woocommerce-MyAccount-navigation {
+		width: 28%;
+	}
+}
+
+.woocommerce-MyAccount-navigation-link {
+	margin-left: 0;
+}
+
+.woocommerce-account .woocommerce-MyAccount-navigation li {
+	padding: 0;
+}
+
+.woocommerce-account .woocommerce-MyAccount-navigation li a,
+.woocommerce-account .woocommerce-MyAccount-navigation li.is-active a {
+	border-top: 1px solid var(--wp--preset--color--foreground);
+	display: block;
+	padding: 0.4rem 1rem;
+	transition: transform 150ms ease;
+}
+
+.woocommerce-account .woocommerce-MyAccount-navigation li a:hover {
+	transform: translateX(4px);
+}
+
+/*
+  Mega trendy footer.
+*/
+.mega-trendy-footer {
+	height: 20vw;
+	overflow: hidden;
+	position: relative;
+}
+
+.mega-trendy-footer__title {
+	bottom: 0;
+	font-size: 18vw;
+	left: 0;
+	line-height: 1;
+	opacity: 0.05;
+	overflow-wrap: normal;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	transform: translateY(30%);
+	white-space: nowrap;
+	width: 100%;
+}
